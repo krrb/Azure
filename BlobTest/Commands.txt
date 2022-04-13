@@ -1,0 +1,4 @@
+dotnet add package Azure.Storage.Blobs
+
+az storage account create --name rnsblobtest --sku Standard_LRS -g RNS-Test-RG --location australiaeast
+az group delete -n RNS-Test-RG --no-wait
