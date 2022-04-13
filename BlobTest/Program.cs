@@ -20,7 +20,7 @@ namespace BlobTest
 
         private static async Task ProcessAsync()
         {
-            string connectionString = "DefaultEndpointsProtocol=https;AccountName=rnsblobtest;AccountKey=ksfGDLW81jRmA5fwaq+5gGuGeZOCGGcQIq57QIOJ8GHG+HRyu3ucehH28tTVorkAE0UNjj60Y55SDQMyeDYb+w==;EndpointSuffix=core.windows.net";
+            string connectionString = "BLOB CONNECTION STRING HERE";
             BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
 
             string containerName = "wtblob" + Guid.NewGuid().ToString();
