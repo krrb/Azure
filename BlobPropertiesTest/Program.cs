@@ -8,7 +8,7 @@ namespace BlobPropertiesTest
         public static void Main()
         {
             Console.WriteLine("View blob properties");
-            var blobConnectionString = "DefaultEndpointsProtocol=https;AccountName=rnstestblobprop;AccountKey=f94/MLqBaUP4+Hx/O85SOxDVUmcoudKMNokfmlrHlO9s91EwPLmq6OLuIxHaXdmN4TVdyy8aGQYZGQA4pqEdDg==;EndpointSuffix=core.windows.net";
+            var blobConnectionString = "BLOB Connection string here";
             BlobServiceClient blobServiceClient = new BlobServiceClient(blobConnectionString);
             BlobContainerClient blobContainerClient = blobServiceClient.GetBlobContainerClient("rns-test-container");
 
