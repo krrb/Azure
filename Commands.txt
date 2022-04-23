@@ -1,4 +1,6 @@
 dotnet add package Azure.Storage.Blobs
+dotnet add package Microsoft.Azure.Cosmos
+
 
 az group create --resource-group RNS-Test-RG --location australiaeast
 az storage account create --name rnsblobtest --sku Standard_LRS -g RNS-Test-RG --location australiaeast
