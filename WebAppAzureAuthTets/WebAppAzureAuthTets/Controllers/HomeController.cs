@@ -20,24 +20,24 @@ namespace WebAppAzureAuthTets.Controllers
 
         public async Task<IActionResult> Index()
         {
-            string[] scopes = new string[] { "https://storage.azure.com/user_impersonation" };
-            string accesstoken = await _tokenAcquisition.GetAccessTokenForUserAsync(scopes);
-            ViewBag.accesstoken = accesstoken.ToString();
+            //string[] scopes = new string[] { "https://storage.azure.com/user_impersonation" };
+            //string accesstoken = await _tokenAcquisition.GetAccessTokenForUserAsync(scopes);
+            //ViewBag.accesstoken = accesstoken.ToString();
 
 
-            Uri blobUri = new Uri("https://rnsauthstorage.blob.core.windows.net/data/Temp.txt");
+            //Uri blobUri = new Uri("https://rnsauthstorage.blob.core.windows.net/data/Temp.txt");
 
-            TokenAcquisitionTokenCredential credential = new TokenAcquisitionTokenCredential(_tokenAcquisition);
-            BlobClient blobClient = new BlobClient(blobUri, credential);
+            //TokenAcquisitionTokenCredential credential = new TokenAcquisitionTokenCredential(_tokenAcquisition);
+            //BlobClient blobClient = new BlobClient(blobUri, credential);
 
-            MemoryStream ms = new MemoryStream();
-            blobClient.DownloadTo(ms);
-            ms.Position = 0;
+            //MemoryStream ms = new MemoryStream();
+            //blobClient.DownloadTo(ms);
+            //ms.Position = 0;
 
-            StreamReader _reader = new StreamReader(ms);
-            string content = _reader.ReadToEnd();
-            ViewBag.content = content;
-            _reader.Close();
+            //StreamReader _reader = new StreamReader(ms);
+            //string content = _reader.ReadToEnd();
+            //ViewBag.content = content;
+            //_reader.Close();
             return View();
         }
 
