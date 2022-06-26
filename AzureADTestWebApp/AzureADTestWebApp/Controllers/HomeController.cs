@@ -15,6 +15,8 @@ namespace AzureADTestWebApp.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.PrincipalName = this.HttpContext.Request.Headers["X-MS-CLIENT-PRINCIPAL-NAME"].ToString();
+            ViewBag.PrincipalID = this.HttpContext.Request.Headers["X-MS-CLIENT-PRINCIPAL-ID"].ToString();
             return View();
         }
 
